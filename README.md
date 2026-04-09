@@ -1,5 +1,7 @@
 # Vibe Web Prompt Architect
 
+中文 | [English](#english)
+
 `vibe-web-prompt-architect` 是一个用于 Codex 的 Skill 包，用来把模糊的网页创意、Hero 区块或 Landing Page 需求，转写为高质量、低歧义、可直接生成前端页面代码的结构化 Prompt。
 
 ## 适用场景
@@ -128,3 +130,132 @@ cp -R ./vibe-web-prompt-architect ~/.codex/skills/
 ## License
 
 本仓库使用 MIT License，详见 `LICENSE`。
+
+---
+
+## English
+
+`vibe-web-prompt-architect` is a Codex skill package that turns vague website ideas, hero concepts, or landing page requests into structured prompts that are high-quality, low-ambiguity, and ready to drive frontend code generation.
+
+### Use Cases
+
+- Brand hero sections
+- SaaS marketing pages
+- Portfolios
+- Agency landing pages
+- AI product pages
+- Video-background pages
+- Glassmorphism / liquid-glass interfaces
+
+### Repository Structure
+
+```text
+.
+├── SKILL.md
+├── agents
+│   └── openai.yaml
+└── references
+    └── prompt-patterns.md
+```
+
+### Files
+
+- `SKILL.md`
+  - Main skill definition, including trigger conditions, execution principles, prompt structure, and workflow.
+- `agents/openai.yaml`
+  - UI metadata used to display the skill name, summary, and default prompt.
+- `references/prompt-patterns.md`
+  - Reusable website prompt patterns covering Hero, SaaS, Portfolio, Glassmorphism, Video Background, and Monochrome styles.
+
+### Installation
+
+Copy the entire directory into your local Codex skills folder:
+
+```bash
+mkdir -p ~/.codex/skills
+cp -R ./vibe-web-prompt-architect ~/.codex/skills/
+```
+
+Or place it directly at:
+
+```text
+~/.codex/skills/vibe-web-prompt-architect
+```
+
+### How to Use
+
+When you want to turn a website vibe-coding request into a structured prompt, trigger this skill and have the model output:
+
+1. Creative direction
+2. Design system
+3. Page structure
+4. Layering
+5. Motion system
+6. Responsive rules
+7. Engineering constraints
+8. Negative constraints
+9. Final prompt
+
+### Example Inputs
+
+```md
+Generate a premium dark cinematic hero prompt for an AI design studio using React + TypeScript + Tailwind CSS, and avoid generic SaaS-template patterns.
+```
+
+```md
+Turn a minimal monochrome content-platform homepage idea into a structured prompt with strong typography hierarchy, whitespace, restrained motion, and a monochrome design system.
+```
+
+```md
+Create a landing page prompt for a SaaS website that feels more branded and less like a feature-card template, including design system, motion, and engineering constraints.
+```
+
+### Example Output Shape
+
+```md
+## Pattern Summary
+[3-6 key rules]
+
+## Structured Breakdown
+### Creative Direction
+### Design System
+### Page Structure
+### Layering
+### Motion System
+### Engineering Constraints
+### Negative Constraints
+
+## Final Prompt
+[A complete prompt ready to copy]
+```
+
+### Design Goal
+
+This skill is not meant to generate page code directly. Its purpose is to generate a stronger, more intentional, less template-like website prompt first, and then let a code-generation model implement it.
+
+Core principles:
+
+- Define the mood before defining the components
+- Translate aesthetics into engineering constraints
+- Apply high precision only to key nodes
+- Always include negative constraints
+- Premium quality comes from layering, not component count
+
+### Development Notes
+
+If you want to extend the package, prefer adding new patterns to `references/prompt-patterns.md` instead of expanding `SKILL.md` too aggressively.
+
+Try to keep new prompt patterns stable across these dimensions:
+
+- Style
+- Design system
+- Page structure
+- Layering
+- Motion
+- Responsiveness
+- Engineering constraints
+- Negative constraints
+
+### License
+
+This repository is licensed under the MIT License. See `LICENSE` for details.
