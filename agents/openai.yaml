@@ -1,0 +1,16 @@
+version: 1
+display_name: Vibe Web Prompt Architect
+short_description: 把模糊网页创意转成高质量、可执行的前端生成 Prompt
+default_prompt: |
+  请使用这个 Skill，把我的网页创意整理成结构化 Prompt。输出需要覆盖：
+  1. 创意方向
+  2. 设计系统
+  3. 页面骨架
+  4. 分层关系
+  5. 动效协议
+  6. 响应式规则
+  7. 工程约束
+  8. 负约束
+  9. 一份可直接复制使用的最终 Prompt
+
+  如果我的输入比较模糊，请先补全缺失的品牌气质、视觉语言和页面结构，再生成最终 Prompt。
