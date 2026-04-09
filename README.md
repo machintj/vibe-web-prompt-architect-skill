@@ -61,6 +61,43 @@ cp -R ./vibe-web-prompt-architect ~/.codex/skills/
 8. 负约束
 9. 最终 Prompt
 
+## 示例输入
+
+你可以像下面这样触发它：
+
+```md
+为一个 AI 设计工作室生成高端视频背景 Hero Prompt，风格要 cinematic、premium、dark，使用 React + TypeScript + Tailwind CSS，避免通用 SaaS 模板感。
+```
+
+```md
+把一个极简黑白内容平台首页需求整理成结构化 Prompt，要求强调字体层次、留白、克制动效和单色系统。
+```
+
+```md
+为一个 SaaS 官网生成 Landing Page Prompt，要求更品牌化、更少 feature-card 模板味，并包含设计系统、动效和工程约束。
+```
+
+## 示例输出结构
+
+建议模型输出：
+
+```md
+## 规律摘要
+[3-6 条规律]
+
+## 结构化拆解
+### 创意方向
+### 设计系统
+### 页面骨架
+### 分层关系
+### 动效协议
+### 工程约束
+### 负约束
+
+## 最终 Prompt
+[可直接复制使用的完整 Prompt]
+```
+
 ## 设计目标
 
 这个 Skill 的目标不是直接生成页面代码，而是先生成一份更稳定、更高级、更少模板味的网页 Prompt，再交给代码生成模型执行。
@@ -90,4 +127,4 @@ cp -R ./vibe-web-prompt-architect ~/.codex/skills/
 
 ## License
 
-未附带许可证；如需开源发布，建议补充明确的 LICENSE。
+本仓库使用 MIT License，详见 `LICENSE`。
